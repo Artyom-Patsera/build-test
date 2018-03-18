@@ -1,0 +1,115 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+
+.footer 
+	width: 100%
+	background-color: $bg-color
+.footer-top-line
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: 50px
+
+	.logo
+		background-color: $blue
+		min-width: 320px
+		flex-grow: 1
+		min-height: 64px
+		height: 64px
+		padding-left: 18px
+		a 
+			span
+				color: #fff
+			p
+				color: #fff
+				text-transform: uppercase
+				opacity: 0.6
+
+.foot-social
+	flex-grow: 1
+	background-color: #3d4044
+	display: flex
+	justify-content: space-around
+	font-size: 20px
+	line-height: 64px
+	min-width: 320px
+	a 
+		color: $text-c
+		transition: all 0.4s
+		&:hover
+			color: #fff
+
+.foot-search
+	flex-grow: 1
+	background-color: #37393e
+	// min-height: 64px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 12px 20px
+	min-width: 320px
+	.def-custom
+		height: 40px
+		line-height: 40px
+		border: none
+		background-color: #3f4146
+		color: $text-c
+		padding: 0 15px
+		font-size: 15px
+	.pole-s
+		flex-grow: 1
+
+	
+.wrap-link
+	font-size: 13px
+	margin-bottom: 40px
+	justify-content: center
+	.def-custom
+		min-width: 300px
+		margin-bottom: 40px
+	h3
+		color: #fff
+		text-transform: uppercase
+		font-size: 16px
+		margin-bottom: 50px
+	a 
+		display: block
+		padding: 9px 0
+		color: $text-c
+		transition: all 0.3s
+		border-bottom: 1px solid $text-c
+		&:last-child
+			border: none
+		&:hover
+			color: $blue
+		
+
+.foot-bottom-line
+	width: 100%
+	min-height: 60px
+	background-color: #35383c
+	.container
+		display: flex
+		justify-content: space-between
+		height: 100%
+		align-items: center	
+		flex-wrap: wrap
+		.prod-home
+			color: $text-c
+			padding: 15px
+.wrap-adress
+	display: flex
+	align-items: center
+	min-height: 60px
+	flex-wrap: wrap
+	.adress 
+		margin-right: 35px
+		color: $text-c
+		min-width: 160px
+		padding: 8px 0
+		span
+			padding: 0 8px

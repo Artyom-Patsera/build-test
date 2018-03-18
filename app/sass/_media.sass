@@ -1,0 +1,112 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+
+// @media only screen and (max-width : 1600px)
+
+// 	.container
+// 		max-width: 1400px
+
+// @media only screen and (max-width : 1920px)
+
+// 	.container
+// 		max-width: 1720px
+
+
+
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+
+	.content
+		margin: 0 auto
+		order: 2
+		width: 100%
+	
+
+	.nav
+		position: relative
+		.menu-trigger
+			display: flex
+	.menu
+		display: block
+		position: absolute
+		background-color: $bg-color
+		left: 0
+		top: 100%
+		z-index: 15
+		opacity: 0.9
+		display: none
+		li 
+			display: block
+			a 
+				display: block
+				position: relative
+			&:hover
+				.drop-down-menu
+					left: 100%
+					top: 0
+
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+	.wrap-profile
+		.wrap-img
+			display: none
+		.text-profile
+			width: 100%
+			padding: 0 20px
+	.wrap-slide
+		.wrap-h
+			bottom: 0
+			left: 0
+			.cap
+				font-size: 34px
+				bottom: 0
+				margin-bottom: 0
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+	.wrap-slide
+		.wrap-h
+			bottom: 0
+			left: 0
+			.cap
+				font-size: 16px
+				bottom: 0
+				margin-bottom: 0
+//Extra small: >0
++media-breakpoint-down(xs)
+	.main 
+		.pdd-0
+			padding: 0
+	
+	.saitbar
+		padding:  0 10px
+	.content
+		padding: 0 10px
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

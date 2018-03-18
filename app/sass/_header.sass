@@ -1,0 +1,285 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+
+.header 
+	position: relative
+	width: 100%
+	margin-bottom: 42px
+	// .container
+	// 	overflow: hidden
+
+.top-line
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	min-height: 108px
+
+
+.logo-bg
+	img
+		vertical-align: middle
+		width: 100%
+
+.logo
+	// width: 300px
+	display: flex
+	align-items: center
+	a 
+		text-decoration: none
+		span
+			font-size: 28px
+			line-height: 1
+			color: #434343
+			font-family: $ubuntu
+			
+		p
+			font-size: 12px
+			font-weight: 400
+			line-height: 1
+			color: $text-c
+	
+
+// ============spite-social==============
+
+.social
+	a 
+		// width: 16px
+		// height: 17px
+		// background: url(../img/sprite.png)  no-repeat
+		margin-right: 10px
+		display: inline-block
+		font-size: 16px
+		color: #cccccc
+		transition: all 0.4s
+		text-align: center
+		padding: 5px
+		&:hover
+			color: $blue
+		// overflow: hidden
+		// &:hover
+		// 	background-position: 0 -19px
+		// &:nth-child(2)
+		// 	background-position: -26px 0
+		// 	&:hover
+		// 		background-position: -26px -19px
+		// &:nth-child(3)
+		// 	background-position: -59px 0
+		// 	&:hover
+		// 		background-position: -59px -19px
+		// &:nth-child(4)
+		// 	background-position: -92px 0
+		// 	&:hover
+		// 		background-position: -92px -19px
+		// &:nth-child(5)
+		// 	background-position: -125px 0
+		// 	margin-right: 0
+		// 	&:hover
+		// 		background-position: -125px -19px
+
+// ============end-spite-social==============
+
+
+
+.nav
+	width: 100%
+	display: flex
+	background-color: $bg-color
+	justify-content: space-between
+	box-shadow: 0px 20px 19px -16px rgba(74,72,74,1)
+	align-items: center
+	flex-wrap: nowrap
+	position: relative
+
+	// ============BEGIN-TOP-MENU-SITE=================
+
+.menu-trigger
+	min-height: 60px
+	padding: 20px 20px
+	color: #fff
+	cursor: pointer
+	display: flex
+	align-items: center
+	display: none
+	&:hover
+		color: $blue
+
+
+.menu
+	// width: 100%
+	display: flex
+	li 
+		display: inline-block
+		position: relative
+		transition: all 0.3s ease-out
+		.active-top-menu
+			background-color: $blue
+			transition: all 0.3s ease-out
+			&:before
+				display: none
+		a 
+			display: inline-block
+			min-height: 60px
+			line-height: 60px
+			padding: 0 40px
+			text-transform: uppercase
+			font-weight: 14px
+			font-family: 'Ubuntu Condensed', sans-serif
+			color: #fff
+			position: relative
+			border-right: 1px solid #070708
+			text-decoration: none
+			transition: all 0.3s ease-out
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				right: 0
+				width: 2px	
+				height: 100%
+				background-image: $grad
+		&:hover
+			& a
+				color: $yellow
+			& .drop-down-menu
+				visibility: visible
+				opacity: 1
+				left: -4px
+				margin: 0
+	.drop-down-menu
+		position: absolute
+		left: -10000px
+		top: 100%
+		background-color: #3e4045
+		width: 192px
+		visibility: hidden
+		opacity: 0
+		margin-top: 10px
+		transition: visibility, opacity, margin 0.3s ease-in
+		z-index: 5
+		li
+			display: block
+			a 
+				display: block
+				border: none
+				padding: 0
+				color: $text-c
+				padding-left: 20px
+				min-height: 40px
+				line-height: 40px
+				font-family: $default-font
+				border-bottom: 1px solid #484a4e
+				border-top: 1px solid #38393e
+				&:before
+					width: 0
+					display: none
+				&:hover
+					color: #fff
+// ============END-TOP-MENU-SITE=================
+
+
+
+.r-menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+	a 
+		min-height: 60px
+		line-height: 60px
+		padding: 20px 20px
+		color: #fff
+		transition: all 0.3s ease-out
+		border-left: 1px solid #070708
+		position: relative
+		display: flex
+		align-items: center
+		text-decoration: none
+		span
+			line-height: 1.5
+			display: inline-block
+			margin: auto
+		.currency
+			margin-left: 10px
+
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			width: 2px	
+			height: 100%
+			background-image: $grad
+		&:hover
+			color: $yellow
+
+
+
+// =======search-top-site==========
+
+.wrap-form-top
+	position: absolute
+	background-color: #3b3c41
+	width: 240px
+	opacity: 0
+	visibility: hidden
+	height: 100%
+	display: flex
+	justify-content: center
+	top: 100%
+	right: 0
+	background-color: $bg-color
+	align-items: stretch
+	border-left: 1px solid #070708
+	transition: all 0.5s ease-out
+	z-index: 6
+	&:after
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 1px	
+		height: 100%
+		background-image: $grad
+	form
+		display: flex
+		justify-content: space-between
+		width: 100%
+		.def-custom
+			ext-align: center
+			line-height: 60px
+			border: none
+			background-color: #3b3c41
+			color: $text-c
+			padding: 0 10px
+		input
+			flex-grow: 2
+			
+		button
+			flex-grow: 1
+			
+		a 
+			flex-grow: 1
+			border: none 	
+			&:after
+				display: none
+
+
+// =======end search-top-site==========
+
+			
+.active-form-top
+	visibility: visible
+	transition: all 0.5s ease-out
+	top: 0
+	opacity: 1
+	
+	
+
+
+
+@import "media"
